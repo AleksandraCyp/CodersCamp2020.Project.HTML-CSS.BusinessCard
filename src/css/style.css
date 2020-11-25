@@ -1,7 +1,7 @@
 :root {
-    --mainColor: #ECE5F0;
-    --secondColor: #FF6663;
-    --thirdColor: #8CAE68;
+    --mainColor: #f3f0f5;
+    --secondColor: #0d243d;
+    --thirdColor: #c2261b;
     --mainFont: verdana, sans-serif;
     --headerFont: 'Fira Sans Extra Condensed', sans-serif;
     --fancyFont: 'Nerko One', cursive;
@@ -17,24 +17,62 @@
 
 body {
     background-color: var(--mainColor);
+    margin: 5px;
 }
+/* slider start*/
+    
+.slider-container {
+    width: 100%; 
+    padding-top: 30%;
+    min-height: 200px; 
+    animation-name: "slider";
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    background-color: yellowgreen;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-image {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    top: -75%;
+}
+/*
+@keyframes slider {
+    0% {background-image: url(../assets/img/slider1.jpg);}
+    23% {background-image: url(../assets/img/slider1.jpg);}
+    25% {background-image: url(../assets/img/slider2.jpg);}
+    48% {background-image: url(../assets/img/slider2.jpg)}
+    50% {background-image: url(../assets/img/slider3.jpg);}
+    73% {background-image: url(../assets/img/slider3.jpg);}
+    75% {background-image: url(../assets/img/slider4.jpg);}
+    98% {background-image: url(../assets/img/slider4.jpg)}
+    100% {background-image: url(../assets/img/slider1.jpg)}
+}
+*/
+/* slider end*/
+
+/* upper menu start*/
 
 .upper-menu-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-    grid-gap: 2px;
+    grid-gap: 1px;
     justify-content: center;
-    margin: 2px;
+    margin: 1px 0px;
 }
 
 .upper-menu-container li {
     list-style: none;
     background-color: var(--secondColor);
-    border-radius: 5px;
+    border-radius: 2px;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .upper-menu-container li:hover {
@@ -53,3 +91,4 @@ body {
     color: var(--mainColor);
 }
 
+/* upper menu end*/
