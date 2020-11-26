@@ -18,40 +18,30 @@
 body {
     background-color: var(--mainColor);
     margin: 5px;
+    min-height: 100vh;
 }
 /* slider start*/
     
 .slider-container {
     width: 100%; 
     padding-top: 30%;
-    min-height: 200px; 
-    animation-name: "slider";
-    animation-duration: 24s;
+    background-size: cover;
+    background-position: center;
+    animation-name: slider;
+    animation-duration: 18s;
     animation-iteration-count: infinite;
-    background-color: yellowgreen;
-    overflow: hidden;
-    position: relative;
 }
 
-.slider-image {
-    object-fit: cover;
-    position: absolute;
-    width: 100%;
-    top: -75%;
-}
-/*
 @keyframes slider {
-    0% {background-image: url(../assets/img/slider1.jpg);}
-    23% {background-image: url(../assets/img/slider1.jpg);}
-    25% {background-image: url(../assets/img/slider2.jpg);}
-    48% {background-image: url(../assets/img/slider2.jpg)}
-    50% {background-image: url(../assets/img/slider3.jpg);}
-    73% {background-image: url(../assets/img/slider3.jpg);}
-    75% {background-image: url(../assets/img/slider4.jpg);}
-    98% {background-image: url(../assets/img/slider4.jpg)}
-    100% {background-image: url(../assets/img/slider1.jpg)}
+    0% {background-image: url('../assets/img/slider1.jpg');}
+    23.33% {background-image: url('../assets/img/slider1.jpg');}
+    33.33% {background-image: url('../assets/img/slider2.jpg');}
+    56.66% {background-image: url('../assets/img/slider2.jpg');}
+    66.66% {background-image: url('../assets/img/slider3.jpg');}
+    89.99% {background-image: url('../assets/img/slider3.jpg');}
+    100% {background-image: url('../assets/img/slider1.jpg');}
 }
-*/
+
 /* slider end*/
 
 /* upper menu start*/
