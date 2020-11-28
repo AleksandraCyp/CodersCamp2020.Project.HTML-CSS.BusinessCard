@@ -1,45 +1,58 @@
 :root {
-    --mainColor: #f3f0f5;
-    --secondColor: #0d243d;
-    --thirdColor: #c2261b;
-    --mainFont: verdana, sans-serif;
-    --headerFont: 'Fira Sans Extra Condensed', sans-serif;
-    --fancyFont: 'Nerko One', cursive;
+  --mainColor: #f3f0f5;
+  --secondColor: #0d243d;
+  --thirdColor: #039aa5;
+  --mainFont: Tahoma, Geneva, sans-serif;
+  --headerFont: "Fira Sans Extra Condensed", sans-serif;
+  --fancyFont: "Nerko One", cursive;
 }
 
-
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
-    background-color: var(--mainColor);
-    margin: 5px;
-    min-height: 100vh;
+  background-color: var(--mainColor);
+  margin: 5px;
+  min-height: 100vh;
 }
 /* slider start*/
-    
+
 .slider-container {
-    width: 100%; 
-    padding-top: 30%;
-    background-size: cover;
-    background-position: center;
-    animation-name: slider;
-    animation-duration: 18s;
-    animation-iteration-count: infinite;
+  width: 100%;
+  padding-top: 30%;
+  background-size: cover;
+  background-position: center;
+  animation-name: slider;
+  animation-duration: 18s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes slider {
-    0% {background-image: url('../assets/img/slider1.jpg');}
-    23.33% {background-image: url('../assets/img/slider1.jpg');}
-    33.33% {background-image: url('../assets/img/slider2.jpg');}
-    56.66% {background-image: url('../assets/img/slider2.jpg');}
-    66.66% {background-image: url('../assets/img/slider3.jpg');}
-    89.99% {background-image: url('../assets/img/slider3.jpg');}
-    100% {background-image: url('../assets/img/slider1.jpg');}
+  0% {
+    background-image: url("../assets/img/slider1.jpg");
+  }
+  23.33% {
+    background-image: url("../assets/img/slider1.jpg");
+  }
+  33.33% {
+    background-image: url("../assets/img/slider2.jpg");
+  }
+  56.66% {
+    background-image: url("../assets/img/slider2.jpg");
+  }
+  66.66% {
+    background-image: url("../assets/img/slider3.jpg");
+  }
+  89.99% {
+    background-image: url("../assets/img/slider3.jpg");
+  }
+  100% {
+    background-image: url("../assets/img/slider1.jpg");
+  }
 }
 
 /* slider end*/
@@ -47,38 +60,76 @@ body {
 /* upper menu start*/
 
 .upper-menu-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-    grid-gap: 1px;
-    justify-content: center;
-    margin: 1px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  grid-gap: 1px;
+  justify-content: center;
+  margin: 1px 0px;
 }
 
 .upper-menu-container li {
-    list-style: none;
-    background-color: var(--secondColor);
-    border-radius: 2px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    transition: background-color 0.15s ease-in-out;
+  list-style: none;
+  background-color: var(--secondColor);
+  border-radius: 2px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .upper-menu-container li:hover {
-    background-color: var(--thirdColor);
+  background-color: var(--thirdColor);
 }
 
 .upper-menu-container a {
-    text-decoration: none;
-    width: 100%;
-    padding: 16px 12px;
+  text-decoration: none;
+  width: 100%;
+  padding: 16px 12px;
 }
 
 .upper-menu-container li span {
-    font-family: var(--headerFont);
-    font-size: 1.4rem;    
-    color: var(--mainColor);
+  font-family: var(--headerFont);
+  font-size: 1.4rem;
+  color: var(--mainColor);
 }
 
 /* upper menu end*/
+
+/* main section */
+
+.introduction-article {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-rows: minmax(350px, auto);
+  grid-gap: 3%;
+  justify-items: center;
+  align-items: center;
+  padding: 3%;
+}
+
+.introduction-article h1 {
+  font-family: var(--headerFont);
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
+
+.introduction-article p {
+  font-family: var(--mainFont);
+}
+
+.introduction-article label {
+  min-width: 400px;
+}
+
+.article-image-container {
+  width: 250px;
+  height: 250px;
+}
+
+.article-image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* main section end */
