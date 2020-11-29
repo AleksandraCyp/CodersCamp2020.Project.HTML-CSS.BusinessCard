@@ -18,6 +18,7 @@ body {
   background-color: var(--mainColor);
   margin: 5px;
   min-height: 100vh;
+  min-width: 350px;
   border: 4px double var(--secondColor)
 }
 
@@ -135,38 +136,42 @@ body {
 .introductions-container {
   display: grid;
   justify-items: center;
+  width: 100%;
 }
 
 .introduction-article {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: center;
   align-items: center;
   justify-content: space-around;
   margin: 50px 0px;
+  max-width: 100%;
 }
 
 .introduction-article h1 {
   font-family: var(--headerFont);
   font-size: 2.6rem;
   margin: 2%;
+  max-width: 100%;
 }
 
 .introduction-article p {
   font-family: var(--mainFont);
+  max-width: 100%;
 }
 
 .introduction-article label {
   text-align: center;
   padding: 3% 3% 3% 3%;
+  max-width: 100%;
 }
 
-.introduction-photo-left label {
-  grid-column: 2 / 5;   
+.introduction-photo-left {
+  grid-template-columns: 350px 1fr;
 }
 
-.introduction-photo-right label {
-  grid-column: 1 / 4;
+.introduction-photo-right {
+  grid-template-columns: 1fr 350px;
 }
 
 .introduction-article img {
@@ -174,14 +179,7 @@ body {
   height: 300px;
   border-radius: 12px;
   box-shadow: 0px 10px 13px -7px #000000;
-}
-
-.introduction-photo-left img {
-  grid-column: 1 / 2;
-}
-
-.introduction-photo-right img {
-  grid-column: 4 / 5;
+  border: 15px solid white;
 }
 
 .click-for-more {
@@ -194,37 +192,27 @@ body {
 }
 
 #introduction-about {
-  grid-column: 1 / 3;
   padding: 3%;
   text-align: center;
 }
 
 #introduction-about-form {
-  grid-column: 3 / 5;
+
 }
 
 /* main section end */
 
 
-@media all and (max-width: 650px) {
+@media all and (max-width: 700px) {
   .introduction-article {
-  grid-template-columns: 1fr;
-  }
-
-  .introduction-photo-left label {
-    grid-column: 1 / 2;  
-  }
-  
-  .introduction-photo-right label {
-    grid-column: 1 / 2;
-  }
-
-  .introduction-photo-left img {
-    grid-column: 1 / 2;
-  }
-  
-  .introduction-photo-right img {
-    grid-column: 1 / 2;
+  grid-template-columns: 90vw;
+  margin: 15px 0px;
   }
 }
 
+@media all and (max-width: 540px) {
+  .introduction-article img {
+    max-width: 98vw;
+    max-height: 98vw;
+  }
+}
