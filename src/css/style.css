@@ -2,6 +2,7 @@
   --mainColor: #f3f0f5;
   --secondColor: #0d243d;
   --thirdColor: #039aa5;
+  --formColor: #039aa521;
   --mainFont: Tahoma, Geneva, sans-serif;
   --headerFont: "Fira Sans Extra Condensed", sans-serif;
   --fancyFont: "Nerko One", cursive;
@@ -16,7 +17,6 @@
 
 body {
   background-color: var(--mainColor);
-  margin: 5px;
   min-height: 100vh;
   min-width: 350px;
   border: 4px double var(--secondColor)
@@ -120,6 +120,7 @@ body {
 .upper-menu-container a {
   text-decoration: none;
   width: 100%;
+  height: 100%;
   padding: 16px 12px;
 }
 
@@ -145,13 +146,13 @@ body {
   align-items: center;
   justify-content: space-around;
   margin: 50px 0px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .introduction-article h1 {
   font-family: var(--headerFont);
   font-size: 2.6rem;
-  margin: 2%;
+  padding: 0px 0px 10px 0px;
   max-width: 100%;
 }
 
@@ -162,16 +163,23 @@ body {
 
 .introduction-article label {
   text-align: center;
-  padding: 3% 3% 3% 3%;
   max-width: 100%;
 }
 
 .introduction-photo-left {
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 400px 1fr;
 }
 
 .introduction-photo-right {
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 400px;
+}
+
+.introduction-photo-left label {
+  padding: 0px 40px 0px 0px;
+}
+
+.introduction-photo-right label {
+  padding: 0px 0px 0px 40px;
 }
 
 .introduction-article img {
@@ -184,7 +192,7 @@ body {
 
 .click-for-more {
   font-weight: bold;
-  margin: 2%;
+  margin: 15px 15px 0px 15px;
 }
 
 .line-between-articles {
@@ -192,27 +200,157 @@ body {
 }
 
 #introduction-about {
-  padding: 3%;
+  max-width: 100%;
   text-align: center;
+  padding: 0px 0px 0px 50px;
 }
+
+/* form start */
 
 #introduction-about-form {
-
+  width: 100%;
+  display: grid;
+  padding: 8px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+  justify-items: center;
+  font-family: var(--mainFont);
 }
+
+#introduction-about-form h2 {
+  font-family: var(--headerFont);
+  font-size: 2rem;
+}
+
+#introduction-about-form h2, 
+#introduction-about-form textarea,
+#introduction-about-form label[for="message-email"],
+#introduction-about-form label[for="message-text"] {
+  grid-column: span 2;
+}
+
+#introduction-about-form label[for="message-email"],
+#introduction-about-form label[for="message-text"] {
+  justify-self: end;
+}
+
+#introduction-about-form label, input[type="submit"] {
+  font-size: 0.95rem;
+}
+
+#message-email, 
+#message-text {
+  background-color: var(--formColor);
+  border: 3px solid var(--secondColor);
+  border-radius: 6px;
+  width: 250px;
+}
+#introduction-about-form textarea {
+  width: 91%;
+  background-color: var(--formColor);
+  border: 3px solid var(--secondColor);
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#introduction-about-form input[type="submit"] {
+  width: 150px; 
+  padding-left: 10px;
+  background-color: var(--secondColor);
+  color: var(--mainColor);
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* form end */
 
 /* main section end */
 
+/* footer start */
 
-@media all and (max-width: 700px) {
-  .introduction-article {
-  grid-template-columns: 90vw;
-  margin: 15px 0px;
-  }
+.footer {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--secondColor);
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-@media all and (max-width: 540px) {
+/* footer end */
+
+@media all and (max-width: 700px) {
+
+  .name-and-logo-container {
+    width: 100%;
+    background-color: var(--secondColor);  
+    position: initial;
+  }
+
+  #main-header-link {
+    text-decoration: none;
+  }
+
+  .upper-menu-container a {
+    padding: 10px 6px;
+  }
+  
+  .upper-menu-container li span {
+    font-size: 1.2rem;
+  }
+
+  .introduction-article {
+  grid-template-columns: 100%;
+  margin: 30px 0px;
+  }
+
+  .introduction-photo-left h1 {
+    padding: 25px 0px 25px 0px;
+  }
+
+  .introduction-photo-left label {
+    padding: 0px 10px;
+  }
+  
+  .introduction-photo-right label {
+    padding: 0px 10px;
+  }
+
+  .introduction-photo-right .click-for-more {
+    padding: 0px 25px 25px 25px;
+  }
+
+#introduction-about-form label[for="message-email"],
+#introduction-about-form label[for="message-text"] {
+  justify-self: center;
+}
+
+#introduction-about {
+  padding: 0px 10px;
+}
+
+#introduction-about h1 {
+  padding: 0px 0px 25px 0px;
+}
+
+#introduction-about-form h2{
+  padding: 25px 0px 0px 0px;
+}
+
+}
+
+@media all and (max-width: 350px) {
+  
+  .introduction-article {
+    grid-template-columns: 100%;
+    margin: 20px 0px;
+    }
+
   .introduction-article img {
-    max-width: 98vw;
-    max-height: 98vw;
+    width: 300px;
+    height: 300px;
   }
 }

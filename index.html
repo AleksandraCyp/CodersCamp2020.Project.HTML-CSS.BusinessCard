@@ -19,15 +19,16 @@
 <body>
 
     <!-- Slider with changing photos -->
-    <header class="main-header">
-        <div class='slider-container'>
-        </div>   
-        <a href="index.html">
+    <header class="main-header">  
+      <a href="index.html" id="main-header-link">
             <div class="name-and-logo-container">
                 <img src="/src/assets/img/flag.png" alt="flaga Genui"/>
                 <p>Przewodnik po Genui</p>
             </div>
         </a>
+        <div class='slider-container'>
+        </div>   
+
     </header>
 
     <!-- Upper menu -->
@@ -100,9 +101,9 @@
                 <img id="introduction-sport" src="src/assets/img/introductionSport.jpg" alt="Kuchnia"/>
                 <label for="introduction-sport">
                     <h1>Sport</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non interdum justo, at dapibus libero. Sed diam nunc, scelerisque vel interdum vel, bibendum sit amet est. Vivamus auctor justo est, id pretium tortor fringilla non. Nunc in lorem ornare, pulvinar ipsum sed, imperdiet est. Morbi laoreet vel felis sed tempor. Sed eu diam id metus blandit fringilla. In vitae arcu eu mauris consequat posuere nec sed est. Mauris eget augue sed quam iaculis consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non interdum justo, at dapibus libero.
+                    <p>Vivamus auctor justo est, id pretium tortor fringilla non. Nunc in lorem ornare, pulvinar ipsum sed, imperdiet est. Morbi laoreet vel felis sed tempor. Sed eu diam id metus blandit fringilla. In vitae arcu eu mauris consequat posuere nec sed est. Mauris eget augue sed quam iaculis consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non interdum justo, at dapibus libero.
                     </p>
-                    <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                     </p>
                     <p class="click-for-more"><a href="">Dowiedz się więcej</a></p>
                 </label>  
@@ -110,28 +111,29 @@
 
             <hr class="line-between-articles"/>
 
-            <article class="introduction-article" id="introducion-about-article">
+            <article class="introduction-article introduction-photo-left" id="introducion-about-article">
                 <div id="introduction-about">
                     <h1>O mnie</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non interdum justo, at dapibus libero. Sed diam nunc, scelerisque vel interdum vel, bibendum sit amet est. Vivamus auctor justo est, id pretium tortor fringilla non. Nunc in lorem ornare, pulvinar ipsum sed, imperdiet est. Morbi laoreet vel felis sed tempor. Sed eu diam id metus blandit fringilla. In vitae arcu eu mauris consequat posuere nec sed est. Mauris eget augue sed quam iaculis consequat.
                     </p>
                 </div>
-                <form id="introduction-about-form">
+                <form id="introduction-about-form" method="GET" action="">
                     <h2>Skontaktuj się ze mną</h2>
-                    <label for="message-email">Twój e-mail:</label>
-                    <input type="text" id="message-email">
-                    <label for="message-text">Temat:</label>
-                    <input type="text" id="message-text">
-                    <textarea rows="8" cols="50"></textarea>
-                    <label for="message-RODO">Jakieś zgody RODO</label>
-                    <input type="checkbox" id="message-RODO">
-                    <button>Wyślij!</button>
+                    <label for="message-email">Twój e-mail: <input type="text" id="message-email"></label>
+                    <label for="message-text">Temat: <input type="text" id="message-text"></label> 
+                    <textarea rows="6"></textarea>
+                    <label>Jakieś zgody RODO <input type="checkbox" id="message-RODO" required></label>
+                    <input type="submit" value="Wyślij"/>
                 </form>  
             </article>
 
         </div>     
 
     </main>
+
+    <footer>
+        <div class="footer">2020 by Aleksandra Cypko</div>
+    </footer>
     
 </body>
 
