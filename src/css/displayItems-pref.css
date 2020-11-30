@@ -1,0 +1,65 @@
+.titleSubpage {
+    font-family: var(--headerFont);
+    font-size: 2.6rem;
+    text-align: center;
+    padding: 30px 0px 15px 0px;
+  }
+
+.itemsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+.item {
+    text-align: center;
+    padding: 30px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.item:hover{
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.standardText {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding: 20px 20px 0px 20px;
+}
+
+@media all and (max-width: 700px) {
+    .titleSubpage {
+        padding: 20px 5px 10px 5px;
+    }
+    .item {
+        padding: 15px;
+    }
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}
