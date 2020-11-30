@@ -132,6 +132,25 @@ body {
 
 /* upper menu end*/
 
+/* main section start*/
+  
+.standardImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 13px -7px #000000;
+  border: 15px solid white;
+}
+
+.standardText {
+  font-family: var(--mainFont);
+  max-width: 100%;
+  line-height: 1.4;
+  color: black;
+}
+
+/* main section end*/
+
 /* footer start */
 
 .footer {
@@ -181,22 +200,3 @@ body {
 
   /* upper menu end*/
 }
-
-/* main section start*/
-  
-.standardImage {
-  width: 300px;
-  height: 300px;
-  border-radius: 12px;
-  box-shadow: 0px 10px 13px -7px #000000;
-  border: 15px solid white;
-}
-
-.standardText {
-  font-family: var(--mainFont);
-  max-width: 100%;
-  line-height: 1.4;
-  color: black;
-}
-
-/* main section end*/
